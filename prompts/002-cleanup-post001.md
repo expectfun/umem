@@ -1,0 +1,220 @@
+You are a careful copy editor. Below is the raw speech-to-text transcript (made by Whisper) of a blog post that the author dictated out loud. Turn it into a clean, publishable text **in the author's own voice**.
+
+## Do
+
+- Fix speech-to-text mistakes, especially misheard names. Context for that: the author used **Claude** (Anthropic's cloud model, often misheard as "cloud") to set up a new MacBook, then local models running in **LM Studio**: **Qwen** chat and coding models (misheard as "Qn" or "Gwen") and a small **Gemma** model. Other words that may appear: vibe-coded, Whisper, frontier models, aliases, shell functions, DeepSeek, Nano Banana, Draw Things.
+- Remove filler and verbal tics: "so," at the start of many sentences, "like" used as filler, "I think" repeated, false starts, repeated words, sentences that restart halfway.
+- Fix grammar slips that come from speaking (wrong tense, missing words), but only where the meaning is obvious.
+- Split the text into paragraphs (the transcript is one sentence per line). Merge very short sentences when spoken rhythm made them choppy.
+
+## Don't
+
+- Don't rewrite into your own style, add ideas, add transitions that aren't there, or make it sound more polished or more enthusiastic than the author.
+- Don't change the order of ideas or cut any idea, even digressions. Shorten only by removing repetition.
+- Don't add headings, a title, a summary or a conclusion.
+- If you're unsure what a word was meant to be, keep it as it is and list it in the notes.
+
+## Output
+
+First the cleaned text in plain Markdown paragraphs. Then a line containing only `---NOTES---`, then a short bullet list of: every name you corrected (from → to), and any spots you were unsure about. Nothing else.
+
+## Transcript
+
+Hi! This is the first post in a new blog series about local AI models.
+The thing is, there is a lot of confusion about the local model's capabilities and limitations now.
+People are unsure whether they should invest in a computer with lots of memory to run models locally,
+or the models themselves are not good enough, so that would be a waste of money and they should just stick to the cloud once.
+I was also unsure, and still am, but I got a new MacBook with 48 gigabytes of unified memory.
+It's not the top of the line, like 128 gigabytes that could run DeepSeq Flash with the help of DwarfStar project,
+but it's enough to run like 27 billion parameter models or so.
+So, I decided to document my experience with it for several reasons.
+First, it might be helpful to some other people.
+Second, that might be helpful to me myself to sort things out and understand things more fully.
+Third, I think that the local models will evolve over time and this website can become like a history log of that evolution.
+So, it would be interesting to compare over time how the capabilities in the future will compare to the current ones.
+So, I thought that it would be interesting to make the site with the help of local AI.
+So, in the posts I will tell about my experience of using local AIs for different tasks,
+but also the website itself is a task and each post will be a page created by some local model.
+The post texts will come from me, but the page itself will be wipecoded to publish this human blog post text.
+I thought that maybe it would be done only with local models, but they showed their limitations pretty fast.
+And also reach for frontier cloud ones, but I tried to consult with them to think of overall direction,
+but delegate their specific tasks such as creating a specific web page to the local models.
+We'll see how that will go.
+So, the first thing I wanted to try local models with is setting up this new laptop.
+Usually, in the past, before AI, when I bought a new laptop, I'll spend the first day installing applications, obviously,
+but also tweaking some settings, setting up aliases in terminal and things like that.
+I know that it can be moved from one laptop to another.
+It can be done via script or something.
+But I like to start fresh, to get rid of the accumulated garbage from the previous laptop
+and to use only the things that stood the test of time and shown that I really need them.
+So, now with AI, it seems not really practical to do all that stuff by hand.
+That at least part of the tasks can and should be delegated to AI models, which can spare me manual labor that's not really interesting.
+But the question is: which models?
+Because I already knew that I can set up a new laptop with cloud models and it's an enjoyable experience.
+But what about the local ones? How helpful they might be in that?
+So, with that thought in mind, I opened up a laptop.
+First, I thought that I'm too lazy to install all these local models by myself and set everything up.
+So, I should use cloud model just for that and then try to move to local ones after the cloud one installs them.
+Like using Internet Explorer to download other LLMs.
+So, I tried to use cloud to download other LLMs and I also asked cloud what is the reasonable choice for today.
+And it installed like Qn, like regular Qn for chatting and also Qn 3 coding.
+And I also installed LLM Studio and it suggested a small Java model and it's small so I downloaded it too.
+I'm not sure about the cloud choice because it used not the most modern version.
+Maybe because of its knowledge cutoff date.
+I'm not really professional currently in the choice of local models.
+So, I think I will need to dive in that more deeply and to check out what are the current best options for different tasks.
+But for now, this web page was done by Qn model listed below.
+So, after cloud downloaded the local LLMs and LLM Studio to run them,
+I've tried to switch to them and continue setting up with them.
+But I quickly ran into the limitations.
+I wanted to create some shell aliases to open some things quickly in the terminal.
+I like short aliases for the CLI applications that I use more often.
+and some comments and I asked Qn to add them and it started.
+OK, it added some of the things that I asked for.
+And then, when I asked for an alias that would take a title for a new folder,
+that would create a new folder and go inside that folder immediately.
+So, it's like combining the mkdir terminal command and cd terminal command to go inside the directory just created.
+Qn correctly said that it shouldn't be an alias.
+It should be a function because alias can't hold variables and the variable is needed to pass the name of the new folder.
+And it added that function to my shell configuration file.
+And it was all right.
+And I thought, OK, great.
+That slightly exceeds my expectations.
+I prompted the wrong way.
+I said the wrong word alias instead of function where it was needed.
+And the model correctly understood what exactly do I need, how it's called really.
+So, that was a pleasant surprise.
+After that came less pleasant surprise because when after that I asked for aliases to open some folders I use often,
+it implemented that as functions too, even though it's a simple thing and there's no need for function here.
+A simple alias is enough.
+So, I asked the model, don't you think that alias might be better here?
+And Qn answered, oh, yes, good catch.
+It could be an alias.
+I will redo it.
+And it tried to fix the situation.
+But it actually made it worse because it somehow left out the alias keyword while doing it.
+Maybe because it was redoing the function where there's no such keyword.
+So, the new version that it did didn't work at all until I manually added the alias keyword before them.
+So, first it did over complicated version that I didn't really need but which worked.
+And then it actually broke it when I asked to make it better.
+So, at this point I felt that I need to review each small step it does.
+I need to fix some things it does.
+And in that case it doesn't help much.
+And it might be easier for me to just create the shell configuration file by myself manually.
+So, there are also more abstract, more general and thought out questions like in this configuration file.
+How should I group different aliases together?
+There needs some logical structure.
+It will work even without that structure but it's more readable with it.
+So, the question that I myself spent some time thinking about in the past is how to make a well-thought structure of it.
+And I felt that if Gwen can't really implement a simple thing like alias reliably then it's probably too much to ask of it to think with me about this structure.
+And I feel that speaking with frontier models really helps me to set my mind on some of such questions.
+We don't actually have a strict right answer.
+It's something that's up to me how I feel that should be structured.
+And when I talk to a frontier model I feel like I'm talking to a peer who has some judgment that can really help to structure things.
+It suggests ideas, I think, whether to use them or not.
+But the ideas themselves are pretty decent.
+So, sometimes I just say okay, I like your plan, let's go with it.
+So, I felt that I really don't want to use the local Gwen model for that.
+I didn't even try actually.
+I don't know what would it come up with.
+Because I felt that it would be time consuming for me to think of its suggestions.
+Whether they are great or just some random hallucinations.
+Whether another model would give me better suggestions.
+And I would miss out by using the ones provided the local models.
+So, the thing is, I felt that I just want to use Claude for this.
+And I mostly set up my laptop with Claude after that.
+And it was a really pleasant experience that sometimes felt like somebody is taking care of me thoughtfully.
+Because I wanted to transfer some of the configuration things off my old laptop.
+And I showed it to Claude.
+And Claude understood which parts are suitable now.
+And which should be left behind.
+And made me notice some subtle but useful things.
+And I felt that I don't want to lose that experience just for the sake of using a local model.
+Because setting up a computer is important.
+It will affect how I will use it afterwards.
+I want to use it to the max.
+I want to feel that it's as convenient and efficient for me as it possibly can be.
+So, I don't want to use a subpar model for that.
+But, does it mean that my local journey has ended before it even started?
+No, far from it.
+The thing is, I felt that I don't want to use local models in important tasks.
+In tasks that I feel important and complicated.
+But, first, it's a good backup plan.
+I like the idea that even if, for some reason, Claude becomes unreachable for me tomorrow.
+That I can't use it for some reason.
+I still have something else.
+And it's my backup plan.
+I feel much better knowing that even if Anthropic tomorrow decides to ban my account for some reasons,
+I don't depend on them fully.
+I depend partly because of the superiority of their frontier models.
+But, I can't live without them.
+And, that feeling of independence is important.
+And, while I have access to Claude frontier models, I will use them.
+If I will lose that access, I will do without.
+Second, I still think that local models, even in their current state with their limitations, can be used.
+And, I'd like to use them for the tasks that are not, like, mission critical.
+One of those tasks is actually creating this very website.
+I'm willing to let Gwen publish this post.
+I think that frontier model probably could do a better job of styling it,
+creating some cool effects.
+I don't know.
+But, I enjoy simple websites.
+First, I've enjoyed it for many years.
+I remember the old internet.
+I think that Gwen can handle the old internet feeling.
+Like, roll black letters over the white font.
+What can be simpler?
+And, that's a starting point.
+And, I'm okay with that.
+I don't need fancy effects.
+I think people often overuse them.
+So, I think that Gwen might be useful for publishing that.
+And, also, the limitations and the problems and issues that arise are also part of the content of this website.
+Even if something is broken on the page, it's also a part of content.
+It shows the limitations of models, which is a part of the topic that the website is dedicated to.
+And, it will be especially interesting to see some problems and then, with new models, see how they stop being problems.
+So, I totally will use the local models for things like this website.
+And, I will stick with cloud ones for now.
+For things that I feel that are more, that affect my life and work more.
+And, where that would matter for quality.
+And, the quality would matter for me.
+Like, in work-related tasks.
+But, I will see where can I get away from the cloud models without hurting the quality.
+And, also, a thing that looks promising for me, now, is using local AI for image generation.
+It also may not be frontier level.
+Like, nano-banana or chat GPT-images 2.5 or 6.
+They have now other ones where they added the GIF support.
+But, I won't currently get the nano-banana level locally.
+But, models like that image seems to work half-decent in such a way that, for some scenarios, they are enough.
+And, I want to explore what they can do, what they can't.
+What are the scenarios, whether they are good enough.
+And, it would be especially interesting to see later how that number of scenarios expands.
+So, I think I'll wrap up for now.
+It's a long text.
+Ah!
+That thing you might have already noticed.
+This post wasn't actually written in a usual way.
+That would take too long.
+I don't have much time now.
+I'm a writer, so I think a lot while writing.
+And, I can chisel a short paragraph for a long time trying to find the perfect words.
+But, this website is much more simple and direct.
+So, I decided to go another way here.
+I decided that I will just say out loud what I think.
+And, then made the local Whisper model.
+Transcribe it.
+And, then another local model to try to slightly edit it to find the things that Whisper don't understand about the context and so on.
+Find out Whisper mistakes and fix them.
+And, then I'll see the result.
+And, if it looks publishable to me, I will just publish it that way.
+With the notice which models were used in its creation.
+And, if I see it and I'm too unhappy with the result and I feel that it requires more editing, I might edit it manually and then note it in the post.
+Or, I might give it to Claude or some other Frontier model to edit it and ask them to add a note in the end if they change something.
+So, this is how it goes.
+So, the first day, like, the results of the first day of using local models, I found out their limitations pretty quickly.
+No, I ran into some of the limitations.
+I don't know all of them yet.
+That's not surprising, but I still think that the local models are good enough for some simple tasks today.
+And, I'm pretty sure they will be useful for more tasks in the future.
+So, I'll use them for this website and we'll see how it goes.
+That's all for the first day, I think.
