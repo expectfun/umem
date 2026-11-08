@@ -11,6 +11,7 @@ A blog about running AI models locally, built by local AI models. Working title.
 3. **Every post ends with "How this page was made"**: model, quantization, runtime, hardware, prompt, time and attempts, what broke, what was fixed and by whom, what was left broken on purpose.
 4. **Fix only what stops someone reading the post.** Leave other flaws in place and list them under "Left broken on purpose".
 5. **The words are mine.** Models build the pages, not the prose.
+6. **Dictation transcripts are public.** The raw Whisper transcript in `dictation/` and in the cleanup prompt is part of the story. Only the audio stays private (`.gitignore`).
 
 ## Layout
 
@@ -18,6 +19,7 @@ A blog about running AI models locally, built by local AI models. Working title.
 - `posts/NNN/index.html`: one folder per post
 - `prompts/`: every prompt sent to a model
 - `raw/`: the models' unedited output
+- `dictation/`: raw speech-to-text transcripts (public; audio is not committed)
 - `run.sh`: sends a prompt to LM Studio and saves the reply in `raw/`
 
 ## Workflow
