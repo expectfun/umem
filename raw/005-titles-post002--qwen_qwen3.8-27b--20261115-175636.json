@@ -1,0 +1,16 @@
+{
+  "model_instance_id": "qwen/qwen3.8-27b",
+  "output": [
+    {
+      "type": "message",
+      "content": "[\n  \"Dictating prompts to cloud LLMs\",\n  \"Thinking aloud with local speech-to-text\",\n  \"A writer discovers dictation\",\n  \"Why I stopped typing prompts\",\n  \"Local speech-to-text for better prompting\",\n  \"Turning rambling into structured prompts\",\n  \"The quiet power of voice input\",\n  \"Dictating my way through a week\",\n  \"Local models and the art of talking\",\n  \"From incoherent thoughts to clear prompts\"\n]"
+    }
+  ],
+  "stats": {
+    "input_tokens": 2650,
+    "total_output_tokens": 110,
+    "reasoning_output_tokens": 0,
+    "tokens_per_second": 16.164862096800235,
+    "time_to_first_token_seconds": 5.88
+  }
+}
